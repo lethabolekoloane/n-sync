@@ -1,0 +1,896 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: blue;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+
+}
+
+/*----------------------------body--------------------------------*/
+.body-con {
+    background: white;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+
+    /*--padding: 0 24px;---------*/
+}
+
+/*-----hero Section------*/
+#hero {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.442), rgba(0, 0, 0, 0.276)), url(/media/pexels-bich-tran-669996.jpg) no-repeat center / cover;
+    color: #ffffff;
+
+}
+
+.hero-con {
+    width: 100%;
+    height: 100%;
+
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.hero-con .info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-con .info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-con .info p {
+    font-size: 1.2rem;
+    max-width: 60%;
+}
+
+.hero-con .info a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: .2em 2em;
+    margin-top: 1rem;
+
+}
+
+/*----About--*/
+#about {
+    background: rgb(234, 234, 234);
+    width: 100%;
+
+    padding-top: 100px;
+    padding-bottom: 100px
+}
+
+.about {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 44px;
+}
+
+.about-info {
+    max-width: 50%;
+}
+
+.about-info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-info p {
+    font-size: 1.2rem;
+    max-width: 90%;
+}
+
+.about-info a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: .2em 2em;
+    margin-top: 1rem;
+}
+
+.button {
+    align-items: center;
+
+}
+
+.tagline .social-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.tagline .social-icon li {
+    list-style: none;
+
+}
+
+.tagline .social-icon li a {
+    font-size: 3em;
+    background-color: rgb(234, 234, 234);
+    color: black;
+    margin: 0 10px;
+    display: inline-block;
+    transition: .5s;
+
+}
+
+.tagline .social-icon li a:hover {
+    transition: translateY(-10px);
+
+}
+
+.tagline {
+    max-width: 50%;
+}
+
+.tagline h1 {
+    font-size: 5rem;
+}
+
+
+
+
+
+/*----service cercular--*/
+#services {
+    background: black;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 100px ;
+
+
+}
+
+@mixin flexBox($direction, $justify-contenet, $align-item, $align-contenet) {
+    display: flex;
+    flex-direction: $direction;
+    justify-contenet: $justify-content;
+    align-items: $align-item;
+    align-content: $align-content;
+}
+
+.circularMap {
+    width: 500px;
+    height: 500px;
+    min-height: 500px;
+    min-width: 500px;
+    border-radius: 500%;
+    border: 1px dashed white;
+    position: relative;
+    margin: auto;
+
+    &__item {
+        @include flexBox(column, flex-start, center, center);
+        position: absolute;
+
+        
+
+    }
+
+}
+.pic{
+    height: 120px;
+    width: 120px;
+    border: 20px;
+    /*border: 2px solid #ee6806;*/
+    object-fit: cover;
+    cursor: pointer;
+    margin: auto;
+    
+}
+.pics{
+    
+    height: 100px;
+    width: 250px;
+    cursor: pointer;
+}
+
+/*positions image alignment*/
+.top{
+    top: 50%;
+    left: 50%;
+    transform: translateX(40%) translateY(-110%);
+    position: static;
+    z-index: 99;
+}
+.top h2{
+    color:  #ee6806;
+    font-size: 20px;
+    margin-left: -30px;
+}
+.top ul li{
+    position: relative;
+    list-style: none;
+    
+}
+.top ul li .lis-consss {
+
+    position: absolute;
+    z-index: 99;
+    bottom: 55px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility:hidden;
+    opacity: 0 ;
+    transition: .5s;
+   
+
+}.top ul li .lis-consss::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 2 black solid;
+    top: -15px;
+    left: 140px;
+    transform: translateX(-40%) translateY(130%);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.top:hover ul li .lis-consss{
+    visibility: visible;
+    opacity: 1 ;
+    transform: translateX(-40%) translateY(130%);
+}
+.lis-consss{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 150px 100px 60px;
+    grid-template-areas: "image" "text";
+    border-radius: 10px;
+    background-color: white;
+    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, .9);*/
+    text-align: center;
+   
+}
+.card-imgsss{
+
+    grid-area: image;
+    background: url("/media/pexels-bich-tran-669996.jpg");
+    border-top: 15px ;
+    background-size: cover;
+
+}
+.card-textsss{
+    grid-area: text;
+    margin: 25px;
+}
+.card-textsss{
+    font-size: 13px;
+}
+.card-imgsss h2{
+    color: #ee6806;
+    margin-top: 0px;
+    font-size: 28px;
+}
+.card-imgsss p{
+    color: black;
+    font-size: 15px;
+    font-weight:300 ;
+}
+
+
+
+.left{
+    top: 50%;
+    left: 0;
+   transform: translateX(-50%) translateY(-60%);
+   position: absolute;
+    z-index: 99;
+}
+.left h2{
+    color:  #ee6806;
+    margin: auto;
+    font-size: 20px;
+    margin-left: -15px;
+}
+.left ul li{
+    position: relative;
+    list-style: none;
+    
+}
+.left ul li .lis-conss {
+
+    position: absolute;
+    z-index: 99;
+    bottom: 55px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility:hidden;
+    opacity: 0 ;
+    transition: .5s;
+   
+
+}
+.left ul li .lis-conss::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 2 black solid;
+    top: 155px;
+    left: -15px;
+    transform: rotate(45deg);
+}
+.left:hover ul li .lis-conss{
+    visibility: visible;
+    opacity: 1 ;
+    transform: translateX(50%) translateY(45%);
+}
+.lis-conss{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 150px 100px 60px;
+    grid-template-areas: "image" "text";
+    border-radius: 10px;
+    background-color: white;
+    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, .9);*/
+    text-align: center;
+   
+}
+.card-imgss{
+
+    grid-area: image;
+    background: url("/media/pexels-bich-tran-669996.jpg");
+    border-top: 15px ;
+    background-size: cover;
+
+}
+.card-textss{
+    grid-area: text;
+    margin: 25px;
+}
+.card-textss{
+    font-size: 13px;
+}
+.card-imgss h2{
+    color: #ee6806;
+    margin-top: 0px;
+    font-size: 28px;
+}
+.card-imgss p{
+    color: black;
+    font-size: 15px;
+    font-weight:300 ;
+}
+
+
+
+
+.right{
+    top:50%;
+    right: 0;
+    transform: translateX(50%) translateY(-60%);
+    position: absolute;
+    z-index: 99;
+}
+.right h2{
+    color:  #ee6806;
+    margin: auto;
+    font-size: 20px;
+}
+
+.right ul li{
+    position: relative;
+    list-style: none;
+    
+}
+
+.right ul li .lis-cons {
+
+    position: absolute;
+    z-index: 99;
+    bottom: 55px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility:hidden;
+    opacity: 0 ;
+    transition: .5s;
+   
+
+}
+.right ul li .lis-cons::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 2 black solid;
+    top: 155px;
+    left: 280px;
+    transform: rotate(45deg);
+}
+
+.right:hover ul li .lis-cons{
+    visibility: visible;
+    opacity: 1 ;
+    transform: translateX(-110%) translateY(45%);
+}
+/*card styling*/
+.lis-cons{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 150px 100px 60px;
+    grid-template-areas: "image" "text";
+    border-radius: 10px;
+    background-color: white;
+    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, .9);*/
+    text-align: center;
+   
+}
+.card-imgs{
+
+    grid-area: image;
+    background: url("/media/pexels-bich-tran-669996.jpg");
+    border-top: 15px ;
+    background-size: cover;
+
+}
+.card-texts{
+    grid-area: text;
+    margin: 25px;
+}
+.card-texts{
+    font-size: 13px;
+}
+.card-imgs h2{
+    color: #ee6806;
+    margin-top: 0px;
+    font-size: 28px;
+}
+.card-imgs p{
+    color: black;
+    font-size: 15px;
+    font-weight:300 ;
+}
+
+
+
+.bottom{
+    bottom: 0;
+   
+    left: 50%;
+    transform: translateX(-40%) translateY(30%);
+    position: absolute;
+    z-index: 99;
+}
+.bottom h2{
+    color:  #ee6806;
+    margin: auto;
+    font-size: 20px;
+}
+
+.bottom ul li{
+    position: relative;
+    list-style: none;
+    
+}
+
+.bottom ul li .lis-con {
+
+    position: absolute;
+    z-index: 99;
+    bottom: 55px;
+  
+    
+    
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility:hidden;
+    opacity: 0 ;
+    transition: .5s;
+   
+
+}
+.bottom ul li .lis-con::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    bottom: -15px;
+    left: 140px;
+    transform: rotate(45deg);
+    z-index: -1;
+   
+}
+.bottom:hover ul li .lis-con{
+    visibility: visible;
+    opacity: 1 ;
+    transform: translateX(-35%) translateY(-20%);
+}
+/*card styling*/
+.lis-con{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 150px 100px 60px;
+    grid-template-areas: "image" "text";
+    border-radius: 10px;
+    background-color: white;
+    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, .9);*/
+    text-align: center;
+    z-index: -1;
+}
+.card-img{
+
+    grid-area: image;
+    background: url("/media/pexels-bich-tran-669996.jpg");
+    border-top: 15px ;
+    background-size: cover;
+
+}
+.card-text{
+    grid-area: text;
+    margin: 25px;
+}
+.card-text{
+    font-size: 13px;
+}
+.card-img h2{
+    color: #ee6806;
+    margin-top: 0px;
+    font-size: 28px;
+}
+.card-img p{
+    color: black;
+    font-size: 15px;
+    font-weight:300 ;
+}
+
+
+.center{
+    top: 50%;
+    left: 50%;
+    transform: translateX(35%) translateY(400%);
+  
+}
+.center h1{
+    font-size: 3rem;
+    margin: auto;
+    color: #ee6806;
+    
+    z-index: -1;
+}
+
+/*----About--*/
+
+
+
+#serv {
+    background: white;
+    width: 100%;
+    height: 50vh;
+}
+
+#servs {
+    background: blue;
+    width: 100%;
+    height: 50vh;
+}
+
+
+
+/*----------------------------------------footer----------------------------*/
+
+footer {
+    position: relative;
+    width: 100%;
+    background: black;
+    min-height: 100px;
+    padding: 20px 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social-icon,
+.footer-men {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .social-icon li,
+.footer-men li {
+    list-style: none;
+
+}
+
+footer .social-icon li a,
+.footer-men li a {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: o.5s;
+
+}
+
+.footer-men li a {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+
+}
+
+.footer-men li a:hover {
+
+    opacity: 1;
+}
+
+footer .social-icon li a:hover {
+    transition: translateY(-10px);
+
+}
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+
+
+
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+
+
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        gap: 0;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero-con .info h1 {
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .hero-con .info h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-con .info p {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .hero-con .info a {
+
+        font-size: 1.4rem;
+        padding: .2em 1.5em;
+        margin-top: 1rem;
+
+    }
+
+    footer .social-icon,
+    .footer-men {
+
+        display: block;
+
+    }
+
+    footer p {
+
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+
+    .footer-men li a {
+
+        margin: 0 0px;
+
+
+    }
+
+}
+
+/*loader*/
+.loader-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade 10s forwards;
+  
+}
+@keyframes fade{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loader {
+    display: inline-block;
+    width: 60px;
+    height: 460px;
+    position: relative;
+    border: 4px solid #ee6806;
+ 
+    animation: loader 2s infinite ease;
+  }
+  
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #ee6806;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+  }
